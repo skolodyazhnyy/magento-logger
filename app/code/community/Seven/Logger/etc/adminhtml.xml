@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * This file is part of the Seven Logger Magento extension
+ *
+ * (c) Sergey Kolodyazhnyy <sergey.kolodyazhnyy@gmail.com>
+ *
+ */
+-->
+<config>
+    <menu>
+        <system module="seven_logger">
+            <children>
+                <logger translate="title">
+                    <title>System logs</title>
+                    <sort_order>109</sort_order>
+                    <children>
+                        <list translate="title">
+                            <title>List</title>
+                            <action>adminhtml/logger</action>
+                            <sort_order>10</sort_order>
+                        </list>
+                        <messages translate="title">
+                            <title>Messages</title>
+                            <action>adminhtml/logger/messages</action>
+                            <sort_order>20</sort_order>
+                        </messages>
+                    </children>
+                </logger>
+            </children>
+        </system>
+    </menu>
+    <acl>
+        <resources>
+            <admin module="seven_logger">
+                <children>
+                    <system>
+                        <children>
+                            <logger translate="title">
+                                <title>System Logs</title>
+                                <children>
+                                    <list translate="title">
+                                        <title>List</title>
+                                    </list>
+                                    <messages translate="title">
+                                        <title>Messages</title>
+                                    </messages>
+                                </children>
+                            </logger>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

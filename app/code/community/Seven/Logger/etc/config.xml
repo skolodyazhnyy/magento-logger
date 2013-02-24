@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * This file is part of the Seven Logger Magento extension
+ *
+ * (c) Sergey Kolodyazhnyy <sergey.kolodyazhnyy@gmail.com>
+ *
+ */
+-->
+<config>
+    <modules>
+        <Seven_Logger>
+            <version>1.0.0</version>
+        </Seven_Logger>
+    </modules>
+    <global>
+        <blocks>
+            <seven_logger>
+                <class>Seven_Logger_Block</class>
+            </seven_logger>
+        </blocks>
+        <models>
+            <seven_logger>
+                <class>Seven_Logger_Model</class>
+                <resourceModel>seven_logger_resource</resourceModel>
+            </seven_logger>
+            <seven_logger_resource>
+                <class>Seven_Logger_Model_Resource</class>
+                <entities>
+                    <log_entry>
+                        <table>seven_logger_entry</table>
+                    </log_entry>
+                    <log_message>
+                        <table>seven_logger_message</table>
+                    </log_message>
+                </entities>
+            </seven_logger_resource>
+        </models>
+        <helpers>
+            <seven_logger>
+                <class>Seven_Logger_Helper</class>
+            </seven_logger>
+        </helpers>
+        <resources>
+            <seven_logger_setup>
+                <setup>
+                    <module>Seven_Logger</module>
+                </setup>
+            </seven_logger_setup>
+        </resources>
+    </global>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Seven_Logger>
+                    <files>
+                        <default>Seven_Logger.csv</default>
+                    </files>
+                </Seven_Logger>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <seven_logger>
+                    <file>seven_logger.xml</file>
+                </seven_logger>
+            </updates>
+        </layout>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <use>admin</use>
+                <args>
+                    <modules>
+                        <Seven_Logger after="Mage_Adminhtml">Seven_Logger_Adminhtml</Seven_Logger>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

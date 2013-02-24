@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * This file is part of the Seven Logger Magento extension
+ *
+ * (c) Sergey Kolodyazhnyy <sergey.kolodyazhnyy@gmail.com>
+ *
+ */
+-->
+<layout>
+
+    <!-- Entry list action -->
+    <adminhtml_logger_index>
+        <reference name="content">
+            <block type="seven_logger/adminhtml_entry" name="seven.logger.entry" />
+        </reference>
+    </adminhtml_logger_index>
+
+    <!-- Message list action -->
+    <adminhtml_logger_messages>
+        <reference name="content">
+            <block type="seven_logger/adminhtml_message" name="seven.logger.messages" />
+        </reference>
+    </adminhtml_logger_messages>
+
+    <!-- Message view action -->
+    <adminhtml_logger_view>
+        <reference name="content">
+            <block type="seven_logger/adminhtml_view_message" name="seven.logger.messages">
+                <block type="seven_logger/adminhtml_view_message_details" name="seven.logger.messages_details" />
+            </block>
+        </reference>
+    </adminhtml_logger_view>
+
+</layout>
