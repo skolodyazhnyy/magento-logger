@@ -1,0 +1,9 @@
+*
+!.gitignore
+!.gitattributes
+!README.md
+!app/code/community/Seven/Logger
+!app/design/adminhtml/default/default/layout/seven_logger.xml
+!app/design/adminhtml/default/default/template/seven_logger
+!app/design/frontend/base/default/layout/seven_logger.xml
+!app/design/frontend/base/default/template/seven_logger
