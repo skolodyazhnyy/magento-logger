@@ -65,7 +65,6 @@ class Seven_Logger_Model_Log_Message extends Mage_Core_Model_Abstract {
 
         if(!$message->getMessageId())
             $message->setData($data);
-
         return $message;
     }
 
@@ -73,6 +72,7 @@ class Seven_Logger_Model_Log_Message extends Mage_Core_Model_Abstract {
      * Create message entry for specific time
      *
      * @param $time
+     * @return $this
      */
 
     public function addEntry($time) {
@@ -80,6 +80,7 @@ class Seven_Logger_Model_Log_Message extends Mage_Core_Model_Abstract {
             $this->save();
 
         $this->getResource()->addEntry($this, $time);
+        return $this;
     }
 
 }

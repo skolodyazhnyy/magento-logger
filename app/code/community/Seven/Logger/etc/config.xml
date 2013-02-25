@@ -48,6 +48,12 @@
                 </setup>
             </seven_logger_setup>
         </resources>
+        <!-- Replace core log writer -->
+        <log>
+            <core>
+                <writer_model>Seven_Logger_Model_Zend_Log_Writer</writer_model>
+            </core>
+        </log>
     </global>
     <adminhtml>
         <translate>
