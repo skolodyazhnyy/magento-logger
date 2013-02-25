@@ -23,6 +23,15 @@ class Seven_Logger_Block_Adminhtml_View_Message extends Mage_Adminhtml_Block_Wid
     }
 
     /**
+     * @return string
+     */
+
+    public function getGridHtml()
+    {
+        return $this->getChildHtml('details') . parent::getGridHtml();
+    }
+
+    /**
      * Check permission for passed action
      *
      * @param string $action
