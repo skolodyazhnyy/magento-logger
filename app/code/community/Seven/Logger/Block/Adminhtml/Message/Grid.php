@@ -15,7 +15,7 @@ class Seven_Logger_Block_Adminhtml_Message_Grid extends Mage_Adminhtml_Block_Wid
     public function __construct() {
         parent::__construct();
         $this->setId('sevenLoggerMessageGrid');
-        $this->setDefaultSort('occures');
+        $this->setDefaultSort('last_occurrence');
         $this->setDefaultDir('DESC');
     }
 

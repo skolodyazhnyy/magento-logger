@@ -14,8 +14,8 @@ class Seven_Logger_Block_Adminhtml_Entry_Grid extends Mage_Adminhtml_Block_Widge
 
     public function __construct() {
         parent::__construct();
-        $this->setId('sevenLoggerMessageGrid');
-        $this->setDefaultSort('occures');
+        $this->setId('sevenLoggerEntryGrid');
+        $this->setDefaultSort('time');
         $this->setDefaultDir('DESC');
     }
 
@@ -38,7 +38,7 @@ class Seven_Logger_Block_Adminhtml_Entry_Grid extends Mage_Adminhtml_Block_Widge
 
     protected function _prepareColumns() {
         $this->addColumn('time', array(
-            'header'    => Mage::helper('seven_logger')->__('Reported at'),
+            'header'    => Mage::helper('seven_logger')->__('Time'),
             'index'     => 'time',
             'type'      => 'datetime'
         ));
